@@ -8,10 +8,10 @@ All commands in the MY VMWAREKIT have help text. Simply use the Powershell Get-H
 
 ### Prerequisites
 
-Required: PowerCLI 10.x.x installed on the machine you intend to run these modules on.
-Required: Run Powershell as Administrator.
-Required: Execution policy cannot be "Restricted".
-Optional: Git
+    Required: PowerCLI 10.x.x installed on the machine you intend to run these modules on.    
+    Required: Run Powershell as Administrator.    
+    Required: Execution policy cannot be "Restricted".    
+    Optional: Git    
 
 ### [Installation](#Installation)
 
