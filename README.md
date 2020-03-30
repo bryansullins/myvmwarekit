@@ -39,8 +39,7 @@ You will need to connect to the vCenter(s) yourself or use the included `profile
 
 Most Functions are built to use the ESXi host as its only parameter, but there are some exceptions.
 
-1. Help text is available for all current functions. It is recommended that you use the help text method (as per each Function in the Module) for added modules to standardize usage.
-2. Additional recommendations for running against multiple hosts:
+Help text is available for all current functions. It is recommended that you use the help text method (as per each Function in the Module) for added modules to standardize usage.
 
 ## Running Module functions on multiple Objects (Steps):
 
@@ -49,11 +48,11 @@ Most Functions are built to use the ESXi host as its only parameter, but there a
 3. Additionally, You can set the ForEach loop to a variable as well (I call this iterative variables) which would allow for additional actions, including Exporting as a report.
 4. That process looks something like this, using the Get-MYHostConfiguration Module Function:
 
-    `PS> $AllHosts = Get-VMHost | Sort-Object Name`   
-    `PS> ForEach ($h in $ALLHosts) { Get-MYHostConfiguration -ESXiHost $h }`
-    or .. .
-    `PS> $HostConfigReport =  ForEach ($h in $ALLHosts) { Get-MYHostConfiguration -ESXiHost $h }`
-    `PS> $HostConfigReport | Export-CSV -Path /path/to/report/location`
+    `PS> $AllHosts = Get-VMHost | Sort-Object Name`    
+    `PS> ForEach ($h in $ALLHosts) { Get-MYHostConfiguration -ESXiHost $h }`    
+    or .. .    
+    `PS> $HostConfigReport =  ForEach ($h in $ALLHosts) { Get-MYHostConfiguration -ESXiHost $h }`    
+    `PS> $HostConfigReport | Export-CSV -Path /path/to/report/location`    
 
 ### Folder Structure:
 
