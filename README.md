@@ -4,7 +4,7 @@ MY VMware PowerCLI Toolkit: This PowerCLI module is made up of commonly-used cus
 
 ## Getting Started
 
-All commands in the MY VMWAREKIT have Help text. Simply use the Powershell Get-Help command to see how to use each MY Toolkit Command.
+All commands in the MY VMWAREKIT have help text. Simply use the Powershell Get-Help command to see how to use each MY Toolkit Command.
 
 ### Prerequisites
 
@@ -15,17 +15,18 @@ Optional: Git
 
 ### [Installation](#Installation)
 
-1. Clone the repo using the git clone command.
-2. cd into the root directory of the repo.
-3. Import the module for use:
+1. Clone the repo using the `git clone` command.
+2. Start Powershell
+3. `cd myvmwarekit\MY.VMWAREKIT`
+4. Import the module for use:
 
     `PS> Import-Module ./MY.VMWAREKIT.psd1 -Global -Force -Verbose`
 
-4. You can see the list of Commands by using the Get-Command CMDLet:
+5. You can see the list of Commands by using the Get-Command CMDLet:
 
     `PS> Get-Command -Module MY.VMWAREKIT`
 
-There is also the GetLatestToolkitfromRepo.ps1 file for users unfamiliar with git. Please ensure the GetLatestTOolkitFromRepo script has the proper URLs for downloading the files for your Modules:
+There is also the GetLatestToolkitfromRepo.ps1 file for users unfamiliar with git. Please ensure the GetLatestToolkitFromRepo script has the proper URLs for downloading the files for your Modules:
 1. Download the GetLatestToolkitfromRepo.ps1 file into a new, empty directory.
 2. Run the script by typing .\GetLatestToolkitfromRepo.ps1.
 3. The script will download the latest Version of the toolkit using the latest companion manifest.
@@ -34,11 +35,11 @@ There is also the GetLatestToolkitfromRepo.ps1 file for users unfamiliar with gi
 
 ### Usage
 
-You will need to connect to the vCenter(s) yourself ort use the included 
+You will need to connect to the vCenter(s) yourself or use the included `profile.ps1` file.
 
 Most Functions are built to use the ESXi host as its only parameter, but there are some exceptions.
 
-1. Help text is available for all current functions. It is recommended that you use the Help text method (as per each Function in the Module) for added modules to standardize usage.
+1. Help text is available for all current functions. It is recommended that you use the help text method (as per each Function in the Module) for added modules to standardize usage.
 2. Additional recommendations for running against multiple hosts:
 
 ## Running Module functions on multiple Objects (Steps):
