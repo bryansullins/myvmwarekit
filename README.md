@@ -44,8 +44,8 @@ Help text is available for all current functions. It is recommended that you use
 ## Running Module functions on multiple Objects (Steps):
 
 1. Once connected to your vCenter(s), create a variable that contains the Hosts/Clusters/VMs you want to run the command on.
-2. Then, use an inline ForEach loop to execute across each host.
-3. Additionally, You can set the ForEach loop to a variable as well (I call this iterative variables) which would allow for additional actions, including Exporting as a report.
+2. Then, use an inline ForEach loop to execute across each Host/VM/Cluster.
+3. Additionally, you can set the ForEach loop to a variable as well (I call this iterative variables) which would allow for additional actions, including Exporting as a report.
 4. That process looks something like this, using the Get-MYHostConfiguration Module Function:
 
     `PS> $AllHosts = Get-VMHost | Sort-Object Name`    
