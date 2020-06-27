@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 =======
 
+## [0.0.2] - Incremental Release 6/26/2020
+### Added
+ - Under the StandaloneScripts directory, added a PS1 script that will get all ESXi hosts from vCenters in a CSV file and place them into an Ansible well-formed inventory file named after the vcenter. Each host will be grouped under their Cluster Name with no spaces and the footer of the file contains Ansible Var information that can be used in plays.
+
 ## [0.0.1] - Original Release 3/29/2020
 ### Added
 Initial Release. Current available commands:
