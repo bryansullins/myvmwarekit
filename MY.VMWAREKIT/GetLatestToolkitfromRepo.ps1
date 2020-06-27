@@ -28,7 +28,7 @@ Write-Host -Foregroundcolor Green "Downloading VMware Toolkit Manifest file . . 
 Invoke-WebRequest -Uri 'https://path/to/raw/git/MY.VMWAREKIT.psd1' -Headers $Headers -OutFile MY.VMWAREKIT.psd1
 Sleep 1
 
-Write-Host -Foregroundcolor Green "Downloading PowerCLI VMware Toolkit file . . ." 
+Write-Host -Foregroundcolor Green "Downloading VMware Toolkit Modules file . . ." 
 Invoke-WebRequest -Uri 'https://path/to/raw/git/MY.VMWAREKIT.psm1' -Headers $Headers -OutFile MY.VMWAREKIT.psm1
 Sleep 1
 
