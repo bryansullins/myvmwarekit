@@ -1,6 +1,6 @@
 <#
-Author: Bryan Sullins - bryansullins@thinkingoutcloud.org
-Contributor: Kevin Seales
+Author: Kevin Seales
+Contributor: Bryan Sullins - bryansullins@thinkingoutcloud.org
 Date: 6-26-2020
 Version: 1.0
 #>
@@ -20,11 +20,12 @@ ForEach ($vCenter in $vCenterList) {
     $VarsLine = "[all:vars]"
     $vCenterVar = "vcenter_hostname" + "=" + '"' + "$vCenter" + '"'
     $SiteTag = "site" + "=" + '"' + (Get-TagAssignment -Entity Datacenters | Select @{N='Site';E={$_.Tag.Name }}).Site + '"'
-    # Sets Inventory Filename for iDRAC all found Hosts
+    # Sets Inventory Filename for all found Hosts
     $inventory_filename = "inventory/$vCenter"
 
     # Removes old inventory files
     Remove-Item $inventory_filename -ErrorAction SilentlyContinue
+    # New line for separating Clusters:
     $NewLine = "`r"
     # Loop through hosts and add hosts to inventory files
     ForEach ($Cluster in $AllClusters) {
