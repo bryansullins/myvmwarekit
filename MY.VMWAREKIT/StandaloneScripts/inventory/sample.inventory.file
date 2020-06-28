@@ -1,0 +1,13 @@
+[VMwareCluster01]
+esxihost01.yourdomain.name
+esxihost02.yourdomain.name
+esxihost03.yourdomain.name
+
+[VMwareCluter02]
+esxihost04.yourdomain.name
+esxihost05.yourdomain.name
+esxihost06.yourdomain.name
+
+[all:vars]
+vcenter_hostname="vcenter.yourdomain.name"
+site="SITETAGHERE"

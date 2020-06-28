@@ -2,7 +2,9 @@
 All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 =======
-
+## [0.0.3] - Incremental Release 6/28/2020
+### Added
+ - Added a sample inventory file.
 
 ## [0.0.2] - Incremental Release 6/26/2020
 ### Added
