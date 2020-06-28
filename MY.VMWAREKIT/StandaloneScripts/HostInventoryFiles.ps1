@@ -2,7 +2,7 @@
 Author: Kevin Seales
 Contributor: Bryan Sullins - bryansullins@thinkingoutcloud.org
 Date: 6-26-2020
-Version: 1.0
+Version: 1.2
 #>
 
 # Setup vars and connection(s) to vCenter
