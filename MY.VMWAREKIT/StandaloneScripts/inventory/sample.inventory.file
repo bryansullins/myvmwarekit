@@ -3,7 +3,7 @@ esxihost01.yourdomain.name
 esxihost02.yourdomain.name
 esxihost03.yourdomain.name
 
-[VMwareCluter02]
+[VMwareCluster02]
 esxihost04.yourdomain.name
 esxihost05.yourdomain.name
 esxihost06.yourdomain.name
