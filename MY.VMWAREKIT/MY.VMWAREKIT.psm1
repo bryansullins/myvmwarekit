@@ -583,7 +583,31 @@ param(
     $events
     }
 }
-         
+
+Function Move-MYVMOffCurrHost ([Parameter(Mandatory=$true)][string]$VMName) {
+    <#
+    .SYNOPSIS
+    Move the VM off the current host to any other host in the cluster.
+    .DESCRIPTION
+    This command will move the VM off the current host and place it on a random host elsewhere in the same cluster. This can be used for vMotion testing or troubleshooting. The command output will give progress percentage as the VM is moved and will tell you to which host the VM has been moved.
+    .EXAMPLE
+    Move-REIVMOffCurrHost -VMName [ESXiHOSTFQDN]
+    #>
+
+    # Set up vars for this function - "find" the VM and footprint the cluster
+    $VMToMove = Get-VM -Name $VMName
+    $AllHostsinCluster = Get-VM -Name $VMName | Get-Cluster | Get-VMHost | Sort-Object Name
+    $CurrHost = $VMToMove | Get-VMHost
+    # Choose a random host in the cluster that isn't the VM's current Host
+        Do {
+            $NewHostRefNum = Get-Random -Maximum ($AllHostsinCluster.count - 1)
+        } While ($CurrHost -match $AllHostsinCluster[$NewHostRefNum])
+    # Move VM to new host and print the result:
+    $NewHosttoMoveTo = $AllHostsinCluster[$NewHostRefNum]
+    Move-VM -VM $VMToMove -Destination $NewHosttoMoveTo
+    Write-Host -Foregroundcolor Magenta "$VMName is now on host $NewHosttoMoveTo."
+}
+
 Function Get-MYvMotionHistory {
 <#   
 .SYNOPSIS  Returns the vMotion/svMotion history    
