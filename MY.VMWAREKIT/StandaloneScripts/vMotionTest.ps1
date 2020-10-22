@@ -25,7 +25,7 @@ While($NumTimestoMove -le $TimetoMoveMax) {
     Start-Sleep -Seconds $Wait 
     
     ForEach ($v in $vMotionTestVMs) {
-        Move-REIVMOffCurrHost -VMName $v
+        Move-MYVMOffCurrHost -VMName $v
     }
 
     $NumTimestoMove += 1

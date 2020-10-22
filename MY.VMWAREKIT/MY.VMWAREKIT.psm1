@@ -591,7 +591,7 @@ Function Move-MYVMOffCurrHost ([Parameter(Mandatory=$true)][string]$VMName) {
     .DESCRIPTION
     This command will move the VM off the current host and place it on a random host elsewhere in the same cluster. This can be used for vMotion testing or troubleshooting. The command output will give progress percentage as the VM is moved and will tell you to which host the VM has been moved.
     .EXAMPLE
-    Move-REIVMOffCurrHost -VMName [VMName]
+    Move-MyVMOffCurrHost -VMName [VMName]
     #>
 
     # Set up vars for this function - "find" the VM and footprint the cluster
