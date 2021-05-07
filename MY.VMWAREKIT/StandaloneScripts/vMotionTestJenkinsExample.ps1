@@ -1,14 +1,10 @@
-Param(
-        [Parameter()][string]$vCenter,
-        [Parameter()][string]$VCUser,
-        [Parameter()][String]$VCPassword
-)
 ## vMotion Test Script
-# Connect to vCenter in Question and get desired VMs:
+# Run in Jenkins (make sure vcuser and vcpw are params in Jenkins):
 Import-Module ./MY.VMWAREKIT/MY.VMWAREKIT.psd1 -Global
-Connect-VIServer -Server $vCenter -User $VCUser -Password $VCPassword -InformationAction Ignore
+Connect-VIServer -Server your.vcenter.here -User $env:vcuser -Password $env:vcpw -InformationAction Ignore
+
 # Alter this line to get the VM(s) you want to test. Use Where-Object or Regex and go crazy! This is just a sample using 1 VM for testing:
-$vMotionTestVMs = Get-VM -Name "VMNAMEHERE"
+$vMotionTestVMs = Get-VM -Name "VMNAMEHERE" # Can also do more complex Where-Object queries.
 
 #Run Parameters for the MY.VMWAREKIT Function
 $NumTimestoMove = 1
