@@ -19,7 +19,7 @@ ModuleVersion = '1.0.0'
 
 # ID used to uniquely identify this module
 # Use the New-GUID command for your identifier, or make your own new Manfest file with the New-ModuleManifest CMDLet.
-GUID = '[NEWGUIDHERE]'
+GUID = 'f609e24f-bdf4-443e-a394-65fda0acde57'
 
 # Author of this module
 Author = 'YOURNAMEHERE'
